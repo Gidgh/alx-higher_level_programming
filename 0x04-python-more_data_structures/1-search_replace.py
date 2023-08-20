@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
-def square_matrix_simple(matrix=[]):
-    new_matrix = []
-    for row in matrix:
-        new_row = []
-        for value in row:
-            new_row.append(value ** 2)
-        new_matrix.append(new_row)
-    return new_matrix
+
+def search_replace(my_list, search, replace):
+    if my_list is None:
+        return
+    new_list = my_list[:]
+    for idx, c in enumerate(new_list):
+        if c == search:
+            new_list[idx] = replace
+    return new_list
